@@ -1,0 +1,179 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #daf0ff;
+  font-family: "Poppins", sans-serif;
+}
+.calc-box {
+  padding: 40px 30px;
+  height: 620px;
+  background-color: #f7f8fb;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 39px;
+  box-shadow: 100px 100px 50px #61bdff80;
+}
+.calc-box .display {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: flex-end;
+  gap: 6px;
+}
+.calc-box .display .operation {
+  font-size: 24px;
+  font-weight: 400;
+  color: #818181;
+}
+.calc-box .display .operation span {
+  color: #109dff;
+}
+.calc-box .display .result {
+  font-size: 48px;
+  font-weight: 500;
+  color: #424242;
+}
+.calc-box .keypad {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.calc-box .keypad .top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.calc-box .keypad .bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.calc-box .keypad .bottom .bottom-left {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.calc-box .keypad .bottom .bottom-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.btn,
+.num {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #ffffff99, #ffffff66);
+  color: #38b9ff;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn:hover,
+.num:hover {
+  background: linear-gradient(135deg, #ffffffe4, #ffffffba);
+  color: #109dff;
+}
+.fa-solid {
+  font-weight: 900;
+}
+.opr {
+  width: 60px;
+  height: 60px;
+  background-color: #ade2ff;
+  color: #109dff;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.opr:hover {
+  background-color: #9eddff;
+}
+.span-r {
+  width: 144px;
+  grid-column: 1 / span 2;
+}
+.plus {
+  height: 96px;
+}
+.equal {
+  width: 60px;
+  height: 96px;
+  background: #19acff;
+  color: #b2daff;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: inset 3px 4px 11px #b0dfff, 9px 13px 23px #00a3ffa6;
+  transition: 0.2s ease;
+}
+.equal:hover {
+  background: #19acff;
+  color: #b2daff;
+  box-shadow: inset 3px 4px 11px #b0dfff, 4px 8px 18px #00a3ffa6;
+}
+
+/* Responsive CSS */
+@media only screen and (max-width: 1024px) {
+  .calc-box {
+    height: 500px;
+  }
+  .calc-box .display {
+    padding: 15px 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .calc-box {
+    padding: 30px 20px;
+    height: 435px;
+  }
+  .calc-box .display .operation {
+    font-size: 23px;
+  }
+  .calc-box .display .result {
+    font-size: 40px;
+  }
+  .calc-box .keypad,
+  .calc-box .keypad .top,
+  .calc-box .keypad .bottom,
+  .calc-box .keypad .bottom .bottom-left,
+  .calc-box .keypad .bottom .bottom-right {
+    gap: 10px;
+  }
+  .btn,
+  .num,
+  .opr,
+  .equal {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+    border-radius: 0.8rem;
+  }
+  .span-r {
+    width: 124px;
+  }
+  .plus,
+  .equal {
+    height: 86px;
+  }
+}
